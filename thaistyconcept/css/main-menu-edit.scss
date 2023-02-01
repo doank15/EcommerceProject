@@ -23,152 +23,6 @@
 	filter: blur(0px) !important;
 }
 
-.menu-test {
-	font-family: "Pangolin", cursive;
-	position: fixed;
-	top: 3em;
-	left: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	color: white;
-
-	.menu-title {
-		font-family: "Dosis", sans-serif;
-		position: absolute;
-		top: 3em;
-	}
-
-	* {
-		box-sizing: border-box;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	/* Style the tab */
-	.tab {
-		float: left;
-		background-color: #f1f1f100;
-		width: auto;
-		height: 70%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	/* Style the buttons that are used to open the tab content */
-	.tab button {
-		font-family: "Dosis", sans-serif;
-		display: block;
-		background-color: rgba(0, 0, 0, 0);
-		color: rgb(255, 255, 255);
-		padding: 11px 10px 11px 0px;
-		width: 250px;
-		border: none;
-		outline: none;
-		text-align: right;
-		cursor: pointer;
-		transition: 0.3s;
-		font-size: 1em;
-		text-shadow: 2px 2px black;
-	}
-
-	/* Change background color of buttons on hover */
-	.tab button:hover {
-		color: burlywood;
-	}
-
-	/* Create an active/current "tab button" class */
-	.tab button.active {
-		font-size: 2em;
-		background-color: rgba(204, 204, 204, 0);
-		color: burlywood;
-	}
-
-	/* Style the tab content */
-	.tabcontent {
-		display: flex;
-		justify-content: flex-start;
-		flex-wrap: wrap;
-		align-items: stretch;
-		align-content: flex-start;
-		flex-direction: column;
-		background-color: hwb(0 100% 0% / 0.25);
-		padding: 8px 8px;
-		border-radius: 8px;
-		width: 70%;
-		//max-height: 28em;
-		height: 25em;
-
-		.danie {
-			background-color: rgba(0, 0, 0, 0.75);
-			border-radius: 8px;
-			font-family: "Pangolin", cursive;
-			font-size: 1em;
-			font-weight: 400;
-			width: 32%;
-			min-height: auto;
-			display: flex;
-			flex-direction: column;
-			padding: 0.7em;
-			margin: 0.3em;
-			text-transform: uppercase;
-			justify-content: flex-start;
-
-			.pierwsza-linia {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				border-bottom: 1px solid white;
-				font-size: 14px;
-
-				.nazwa-dania {
-					i.fa-right-long {
-						padding: 0 8px;
-					}
-
-					.left-padding {
-						padding: 0 0 4px 8px;
-					}
-
-					.fa-seedling {
-						padding-left: 4px;
-					}
-				}
-				.cena-dania {
-				}
-			}
-
-			.druga-linia {
-				font-size: 12px;
-				width: 100%;
-
-				.opis-dania {
-					display: flex;
-					flex-direction: column;
-					justify-content: flex-start;
-					align-content: stretch;
-					float: left;
-
-					.choose-price {
-						width: 100%;
-						display: flex;
-						justify-content: space-between;
-						font-size: 11px;
-
-						.left-padding {
-							padding: 0 0 4px 8px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
 
 @media only screen and (min-width: 920px) {
 	.wrapper {
@@ -237,6 +91,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			
 		}
 
 		/* Style the buttons that are used to open the tab content */
@@ -282,6 +137,10 @@
 			width: 70%;
 			//max-height: 28em;
 			height: 25em;
+
+			.mobile-title {
+				display: none;
+			}
 
 			.danie {
 				background-color: rgba(0, 0, 0, 0.75);

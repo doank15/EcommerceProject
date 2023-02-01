@@ -22,132 +22,6 @@
   filter: blur(0px) !important;
 }
 
-.menu-test {
-  font-family: "Pangolin", cursive;
-  position: fixed;
-  top: 3em;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  /* Style the tab */
-  /* Style the buttons that are used to open the tab content */
-  /* Change background color of buttons on hover */
-  /* Create an active/current "tab button" class */
-  /* Style the tab content */
-}
-.menu-test .menu-title {
-  font-family: "Dosis", sans-serif;
-  position: absolute;
-  top: 3em;
-}
-.menu-test * {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-test .tab {
-  float: left;
-  background-color: rgba(241, 241, 241, 0);
-  width: auto;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.menu-test .tab button {
-  font-family: "Dosis", sans-serif;
-  display: block;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(255, 255, 255);
-  padding: 11px 10px 11px 0px;
-  width: 250px;
-  border: none;
-  outline: none;
-  text-align: right;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 1em;
-  text-shadow: 2px 2px black;
-}
-.menu-test .tab button:hover {
-  color: burlywood;
-}
-.menu-test .tab button.active {
-  font-size: 2em;
-  background-color: rgba(204, 204, 204, 0);
-  color: burlywood;
-}
-.menu-test .tabcontent {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-content: flex-start;
-  flex-direction: column;
-  background-color: hwb(0 100% 0%/0.25);
-  padding: 8px 8px;
-  border-radius: 8px;
-  width: 70%;
-  height: 25em;
-}
-.menu-test .tabcontent .danie {
-  background-color: rgba(0, 0, 0, 0.75);
-  border-radius: 8px;
-  font-family: "Pangolin", cursive;
-  font-size: 1em;
-  font-weight: 400;
-  width: 32%;
-  min-height: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0.7em;
-  margin: 0.3em;
-  text-transform: uppercase;
-  justify-content: flex-start;
-}
-.menu-test .tabcontent .danie .pierwsza-linia {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid white;
-  font-size: 14px;
-}
-.menu-test .tabcontent .danie .pierwsza-linia .nazwa-dania i.fa-right-long {
-  padding: 0 8px;
-}
-.menu-test .tabcontent .danie .pierwsza-linia .nazwa-dania .left-padding {
-  padding: 0 0 4px 8px;
-}
-.menu-test .tabcontent .danie .pierwsza-linia .nazwa-dania .fa-seedling {
-  padding-left: 4px;
-}
-.menu-test .tabcontent .danie .druga-linia {
-  font-size: 12px;
-  width: 100%;
-}
-.menu-test .tabcontent .danie .druga-linia .opis-dania {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: stretch;
-  float: left;
-}
-.menu-test .tabcontent .danie .druga-linia .opis-dania .choose-price {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-}
-.menu-test .tabcontent .danie .druga-linia .opis-dania .choose-price .left-padding {
-  padding: 0 0 4px 8px;
-}
-
 @media only screen and (min-width: 920px) {
   .wrapper {
     -webkit-animation: circle 2s, pause-between-iterrations 4s;
@@ -251,6 +125,9 @@
     border-radius: 8px;
     width: 70%;
     height: 25em;
+  }
+  .menu-test .tabcontent .mobile-title {
+    display: none;
   }
   .menu-test .tabcontent .danie {
     background-color: rgba(0, 0, 0, 0.75);
