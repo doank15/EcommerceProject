@@ -14,7 +14,7 @@
 
 .section-home {
   width: 100vw;
-  height: 100vh;
+  height: 220vh;
   background-image: url("../img/IMG_7322.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,6 +38,7 @@
   height: auto;
   align-items: center;
   color: white;
+  background-color: rgba(241, 241, 241, 0);
 }
 .mobile-container .mobile-menu-title {
   display: flex;
