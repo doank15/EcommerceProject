@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper" id="container">
+			<div class="main" id="inner">
+				<div class="logo">
+					<span>mie</span>
+					<span>dzia</span>
+					<span>now</span>
+					<span>ski</span>
+				</div>
+				<div class="main-section">
+					<div class="section">
+						<button
+							class="tablink"
+							onclick="openPage('Home', this, 'var(--black)')"
+							id="defaultOpen"
+						>
+							about
+						</button>
+						<button
+							class="tablink"
+							onclick="openPage('News', this, 'var(--black)')"
+						>
+							work
+						</button>
+						<button
+							class="tablink"
+							onclick="openPage('Contact', this, 'var(--black)')"
+						>
+							hire me
+						</button>
+						<button
+							class="tablink"
+							onclick="openPage('About', this, 'var(--black)')"
+						>
+							About
+						</button>
+
+						<div id="Home" class="tabcontent">
+							<h3>about</h3>
+							<p>
+								Jeśli szukasz profesjonalnego web designera,
+								który zaprojektuje dla Ciebie wyjątkową stronę
+								internetową, to jesteś we właściwym miejscu.
+								Jako doświadczony web designer oferuję
+								kompleksowe usługi projektowania stron
+								internetowych, które są zgodne z najnowszymi
+								trendami i technologiami. Moje strony są
+								responsywne, łatwe w użyciu i zaprojektowane
+								zgodnie z wymaganiami klienta. Oferuję również
+								usługi optymalizacji SEO, aby Twoja strona była
+								widoczna w wyszukiwarkach internetowych. Dzięki
+								moim usługom Twoja strona będzie wyglądać
+								profesjonalnie i będzie przyciągać nowych
+								klientów. Jeśli szukasz profesjonalnego web
+								designera, który zaprojektuje dla Ciebie
+								wyjątkową stronę internetową, skontaktuj się ze
+								mną już dziś.
+							</p>
+						</div>
+
+						<div id="News" class="tabcontent">
+							<h3>News</h3>
+							<p>Some news this fine day!</p>
+						</div>
+
+						<div id="Contact" class="tabcontent">
+							<h3>Contact</h3>
+							<p>
+								Get in touch, or swing by for a cup of coffee.
+							</p>
+						</div>
+
+						<div id="About" class="tabcontent">
+							<h3>About</h3>
+							<p>Who we are and what we do.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

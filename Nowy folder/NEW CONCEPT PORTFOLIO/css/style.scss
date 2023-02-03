@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+:root {
+	--black: #0c0c0f;
+	--white: #e1e1e5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Anton", sans-serif;
+}
+
+span::selection {
+	color: var(--white);
+	background-color: red;
+}
+p::selection {
+	color: var(--white);
+	background-color: red;
+}
+button::selection {
+	color: var(--white);
+	background-color: red;
+}
+h3::selection {
+	color: var(--white);
+	background-color: red;
+}
+
+
+
+.wrapper {
+	font-family: "Anton", sans-serif;
+	background-color: var(--black);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	
+
+	.main {
+		background-color: var(--black);
+		width: 80%;
+		height: 80%;
+		box-shadow: 0px 0px 100px var(--white);
+		color: var(--white);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		perspective: 40px;
+		transition: transform 0.5s;
+
+		.logo {
+			display: flex;
+			flex-direction: column;
+			text-transform: uppercase;
+			font-size: 8.5rem;
+			height: 100%;
+			justify-content: center;
+
+			:nth-child(1) {
+				letter-spacing: 11px;
+			}
+			:nth-child(2) {
+				letter-spacing: 0px;
+			}
+			:nth-child(3) {
+				letter-spacing: -5px;
+			}
+			:nth-child(4) {
+				letter-spacing: 26px;
+			}
+
+			span {
+				display: flex;
+				align-items: center;
+				padding: 0;
+				margin: 0;
+				line-height: 0.9;
+			}
+		}
+
+		//MAIN SECTION
+		.main-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+		.section {
+			width: 80%;
+			height: 88%;
+
+			.tablink {
+				text-transform: uppercase;
+				background-color: var(--black);
+				color: var(--white);
+				float: left;
+				text-align: left;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 50px 10px 0;
+				font-size: 2em;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			/* Style the tab content (and add height:100% for full page content) */
+			.tabcontent {
+				color: var(--white);
+				display: none;
+				padding: 0;
+				margin: 100px 0;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
