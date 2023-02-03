@@ -18,8 +18,96 @@
   background-image: url("../img/IMG_7322.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   opacity: 30%;
   filter: blur(0px) !important;
+}
+
+.menu-test {
+  display: none;
+}
+
+.mobile-container {
+  position: absolute;
+  top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  color: white;
+}
+.mobile-container .mobile-menu-title {
+  display: flex;
+  justify-content: center;
+}
+.mobile-container .mobile-res-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  align-items: center;
+  background-color: hwb(0 100% 0%/0.25);
+  border-radius: 8px;
+}
+.mobile-container .mobile-res-menu .mobile-menu-position {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.mobile-container .mobile-res-menu .mobile-danie {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  font-family: "Pangolin", cursive;
+  font-size: 1em;
+  font-weight: 400;
+  width: 85%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7em;
+  margin: 0.3em;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-pierwsza-linia {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  font-size: 14px;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-pierwsza-linia .mobile-nazwa-dania i.fa-right-long {
+  padding: 0 8px;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-pierwsza-linia .mobile-nazwa-dania .mobile-left-padding {
+  padding: 0 0 4px 8px;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-pierwsza-linia .mobile-nazwa-dania .fa-seedling {
+  padding-left: 4px;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-druga-linia {
+  font-size: 12px;
+  width: 100%;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-druga-linia .mobile-opis-dania {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+  float: left;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-druga-linia .mobile-opis-dania .mobile-choose-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.mobile-container .mobile-res-menu .mobile-danie .mobile-druga-linia .mobile-opis-dania .mobile-choose-price .mobile-left-padding {
+  padding: 0 0 4px 8px;
 }
 
 @media only screen and (min-width: 920px) {
@@ -52,6 +140,9 @@
     opacity: 100%;
     z-index: 100;
   }
+  .mobile-container {
+    display: none;
+  }
   .menu-test {
     font-family: "Pangolin", cursive;
     position: fixed;
@@ -61,7 +152,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     color: white;
     /* Style the tab */
@@ -125,9 +216,6 @@
     border-radius: 8px;
     width: 70%;
     height: 25em;
-  }
-  .menu-test .tabcontent .mobile-title {
-    display: none;
   }
   .menu-test .tabcontent .danie {
     background-color: rgba(0, 0, 0, 0.75);

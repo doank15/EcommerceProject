@@ -424,6 +424,16 @@ section.restaurant-menu {
   overflow-y: auto;
   opacity: 1;
 }
+section.restaurant-menu .clickme {
+  position: relative;
+  top: 80px;
+  left: 80px;
+  display: flex;
+  width: 10em;
+  z-index: 99;
+  transform: rotate(0deg);
+  filter: invert(1) drop-shadow(0 0 10px rgb(0, 0, 0));
+}
 section.restaurant-menu .button {
   width: 80%;
   font-size: 1.5em;
@@ -451,6 +461,7 @@ section.restaurant-menu h1 span {
 }
 section.restaurant-menu .container {
   margin: 0;
+  transform: translateY(-50px);
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -491,7 +502,7 @@ section.restaurant-menu .container .zoli-menu {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  padding-top: 2em;
+  padding-top: 0em;
 }
 section.restaurant-menu .container .zoli-menu a {
   text-decoration: none;
@@ -861,6 +872,8 @@ section.contact .container .contact p {
     height: 100%;
     z-index: 99;
     overflow-y: auto;
+    margin: 0;
+    padding: 0;
   }
   section.restaurant-menu h1 {
     color: white;
@@ -879,6 +892,17 @@ section.contact .container .contact p {
     width: 80%;
     height: 100%;
     text-shadow: 2px 2px black;
+    transform: translateY(-5em);
+  }
+  section.restaurant-menu .container .clickme {
+    position: relative;
+    top: 130px;
+    left: -200px;
+    display: flex;
+    width: 10em;
+    z-index: 999;
+    transform: rotate(-90deg);
+    filter: invert(1) drop-shadow(0 0 10px rgb(0, 0, 0));
   }
   section.restaurant-menu .container .bankowy-menu {
     width: 100%;
