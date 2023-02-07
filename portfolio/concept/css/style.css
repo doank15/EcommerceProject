@@ -12,8 +12,7 @@
   padding: 0;
   -webkit-touch-callout: none; /* iOS Safari                           */
   -webkit-user-select: none; /* Safari                               */ /* Konqueror HTML                       */
-  -moz-user-select: none; /* Firefox w przeszłości (stare wersje) */
-  -ms-user-select: none; /* Internet Explorer (>=10) / Edge      */
+  -moz-user-select: none; /* Firefox w przeszłości (stare wersje) */ /* Internet Explorer (>=10) / Edge      */
   user-select: none;
 }
 

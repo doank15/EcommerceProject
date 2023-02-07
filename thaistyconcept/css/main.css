@@ -263,7 +263,6 @@ header svg {
   border-left: 2px solid #fff;
   border-bottom: 2px solid #fff;
   transform: rotateZ(-45deg);
-  -webkit-animation: sdb06 1.5s infinite;
   animation: sdb06 1.5s infinite;
   box-sizing: border-box;
 }
@@ -597,10 +596,8 @@ section.contact .container .contact p {
 }
 @media only screen and (min-width: 920px) {
   .wrapper {
-    -webkit-animation: circle 2s, pause-between-iterrations 4s;
-            animation: circle 2s, pause-between-iterrations 4s;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation: circle 2s, pause-between-iterrations 4s;
+    animation-timing-function: ease-in;
     background: rgba(255, 166, 0, 0);
     -webkit-clip-path: circle(10000%);
             clip-path: circle(10000%);
@@ -695,7 +692,6 @@ section.contact .container .contact p {
     height: 100vh;
   }
   .logo-home-desktop img {
-    -webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
     animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
     background-color: transparent;
     opacity: 100%;
@@ -731,7 +727,6 @@ section.contact .container .contact p {
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
     transform: rotateZ(-45deg);
-    -webkit-animation: sdb06 1.5s infinite;
     animation: sdb06 1.5s infinite;
     box-sizing: border-box;
   }
@@ -1068,16 +1063,6 @@ section.contact .container .contact p {
     width: 100%;
   }
 }
-@-webkit-keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 @keyframes scale-in-center {
   0% {
     transform: scale(0);
@@ -1086,20 +1071,6 @@ section.contact .container .contact p {
   100% {
     transform: scale(1);
     opacity: 1;
-  }
-}
-@-webkit-keyframes circle {
-  0% {
-    -webkit-clip-path: circle(0%);
-            clip-path: circle(0%);
-  }
-  30% {
-    -webkit-clip-path: circle(0%);
-            clip-path: circle(0%);
-  }
-  100% {
-    -webkit-clip-path: circle(100%);
-            clip-path: circle(100%);
   }
 }
 @keyframes circle {
@@ -1114,19 +1085,6 @@ section.contact .container .contact p {
   100% {
     -webkit-clip-path: circle(100%);
             clip-path: circle(100%);
-  }
-}
-@-webkit-keyframes sdb06 {
-  0% {
-    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-    opacity: 0;
   }
 }
 @keyframes sdb06 {
