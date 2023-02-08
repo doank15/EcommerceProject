@@ -62,6 +62,7 @@ h3 {
 }
 
 .wrapper {
+  position: fixed;
   background-color: var(--black);
   width: 100vw;
   height: 100vh;
