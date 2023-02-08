@@ -92,10 +92,22 @@ h3 {
 					a {
 						text-decoration: none;
 						color: var(--white);
+
+						&:hover(:not(:first-child)) {
+							text-shadow: 0px 0px 20px var(--white),
+								0px 0px 20px var(--white),
+								0px 0px 20px var(--white);
+						}
 					}
 
 					&:first-child {
 						font-size: 40px;
+
+						&:hover {
+							text-shadow: 0px 0px 20px #6e5494,
+								0px 0px 20px #6e5494, 0px 0px 20px #6e5494;
+							color: #6e5494;
+						}
 					}
 				}
 			}
@@ -112,11 +124,8 @@ h3 {
 				margin-left: 4px;
 				cursor: default;
 				transition: 0.3s;
-
-				&:hover {
-					text-shadow: 0px 0px 20px red, 0px 0px 20px red,
-						0px 0px 20px red;
-				}
+				text-shadow: 0px 0px 20px red, 0px 0px 20px red,
+					0px 0px 20px red;
 
 				:nth-child(1) {
 					letter-spacing: 11px;
@@ -195,7 +204,7 @@ h3 {
 					flex-direction: column;
 					align-items: center;
 					justify-content: space-evenly;
-					margin: 0 0 0.5em 0;
+					margin: 0;
 					font-size: 5em;
 					width: 100%;
 					height: 80%;
@@ -204,7 +213,6 @@ h3 {
 						text-decoration: none;
 						color: var(--white);
 						transition: 0.3s;
-						
 
 						&:nth-child(1) {
 							text-shadow: 0px 0px 60px #dd4b39,
@@ -234,6 +242,218 @@ h3 {
 
 footer {
 	display: none;
+}
+
+@media (orientation: landscape) {
+	.wrapper {
+		position: fixed;
+		top: 0;
+		background-color: var(--black);
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+
+		.main {
+			display: none;
+		}
+
+		.mobile-main {
+			position: fixed;
+			background-color: var(--black);
+			width: 100%;
+			height: 100%;
+			box-shadow: 0px 0px 100px var(--white);
+			color: var(--white);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			perspective: 40px;
+			transition: transform 0.5s;
+
+			.mobile-section {
+				width: 90%;
+				height: 95%;
+				background: var(--black);
+				overflow-x: hidden;
+
+				.mobile-buttons {
+					position: sticky;
+					top: 0;
+					margin: 0 0 0.6em 0;
+					display: flex;
+					justify-content: space-around;
+					flex-direction: row-reverse;
+
+					.btn {
+						font-family: "Playfair Display", serif;
+						background-color: transparent;
+						font-size: 1.4em;
+						border: none;
+
+						a {
+							text-decoration: none;
+							color: var(--white);
+
+							&:hover(:not(:first-child)) {
+								text-shadow: 0px 0px 20px var(--white),
+									0px 0px 20px var(--white),
+									0px 0px 20px var(--white);
+							}
+						}
+
+						&:first-child {
+							font-size: 40px;
+
+							&:hover {
+								text-shadow: 0px 0px 20px #6e5494,
+									0px 0px 20px #6e5494, 0px 0px 20px #6e5494;
+								color: #6e5494;
+							}
+						}
+					}
+				}
+
+				.mobile-logo {
+					font-family: "Anton", sans-serif;
+					display: flex;
+					flex-direction: column;
+					text-transform: uppercase;
+					font-size: 5em;
+					height: 100%;
+					width: 100%;
+					justify-content: flex-start;
+					margin-left: 4px;
+					cursor: default;
+					transition: 0.3s;
+					text-shadow: 0px 0px 20px red, 0px 0px 20px red,
+						0px 0px 20px red;
+
+					:nth-child(1) {
+						letter-spacing: 11px;
+					}
+					:nth-child(2) {
+						letter-spacing: 0px;
+					}
+					:nth-child(3) {
+						letter-spacing: -5px;
+					}
+					:nth-child(4) {
+						letter-spacing: 7px;
+					}
+
+					span {
+						display: flex;
+						align-items: center;
+						padding: 0;
+						margin: 0;
+						line-height: 0.9;
+					}
+				}
+
+				.mobile-about {
+					font-family: "Exo 2", sans-serif;
+					display: flex;
+					justify-content: center;
+					align-items: flex-start;
+					flex-direction: column;
+					height: 100vh;
+					width: 100%;
+					overflow-y: hidden;
+					text-align: justify;
+					margin: 0;
+
+					p {
+						width: 95%;
+					}
+				}
+
+				.mobile-work {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					height: 100vh;
+					width: 100%;
+					margin: 0;
+					padding: 0;
+
+					img {
+						width: 30%;
+						height: 30%;
+					}
+				}
+
+				.mobile-hireme {
+					font-family: "Exo 2", sans-serif;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					height: 100%;
+					width: 100%;
+					overflow-y: hidden;
+					text-align: justify;
+
+					.hireme-section {
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-end;
+						align-items: flex-start;
+						width: 100%;
+						height: 80%;
+					}
+
+					p {
+						width: 95%;
+						height: auto;
+					}
+
+					.mobile-social-link {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-evenly;
+						margin: 0;
+						font-size: 5em;
+						width: 100%;
+						height: 80%;
+
+						a {
+							text-decoration: none;
+							color: var(--white);
+							transition: 0.3s;
+
+							&:nth-child(1) {
+								text-shadow: 0px 0px 60px #dd4b39,
+									0px 0px 60px #dd4b39;
+							}
+
+							&:nth-child(2) {
+								text-shadow: 0px 0px 60px #1877f2,
+									0px 0px 60px #1877f2;
+							}
+
+							&:nth-child(3) {
+								text-shadow: 0px 0px 60px #f77737,
+									0px 0px 60px #f77737;
+							}
+
+							&:nth-child(4) {
+								text-shadow: 0px 0px 60px #0077b5,
+									0px 0px 60px #0077b5;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		display: none;
+	}
 }
 
 //DESKTOP
