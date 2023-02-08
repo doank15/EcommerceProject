@@ -14,6 +14,7 @@
   -webkit-user-select: none; /* Safari                               */ /* Konqueror HTML                       */
   -moz-user-select: none; /* Firefox w przeszłości (stare wersje) */ /* Internet Explorer (>=10) / Edge      */
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 span::-moz-selection {
@@ -73,6 +74,7 @@ h3 {
   display: none;
 }
 .wrapper .mobile-main {
+  position: fixed;
   background-color: var(--black);
   width: 90%;
   height: 90%;
@@ -91,9 +93,11 @@ h3 {
   width: 90%;
   height: 95%;
   background: var(--black);
-  overflow: auto;
+  overflow-x: hidden;
 }
 .wrapper .mobile-main .mobile-section .mobile-buttons {
+  position: sticky;
+  top: 0;
   margin: 0.6em 0;
   display: flex;
   justify-content: space-around;
@@ -101,7 +105,7 @@ h3 {
 }
 .wrapper .mobile-main .mobile-section .mobile-buttons .btn {
   font-family: "Playfair Display", serif;
-  background-color: var(--black);
+  background-color: transparent;
   font-size: 1.4em;
   border: none;
 }
@@ -118,9 +122,10 @@ h3 {
   flex-direction: column;
   text-transform: uppercase;
   font-size: 10rem;
-  height: auto;
-  justify-content: center;
-  padding-left: 4px;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  margin-left: 4px;
   cursor: default;
   transition: 0.3s;
 }
@@ -145,6 +150,21 @@ h3 {
   padding: 0;
   margin: 0;
   line-height: 0.9;
+}
+.wrapper .mobile-main .mobile-section .mobile-about {
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  text-align: justify;
+  margin: 0;
+}
+.wrapper .mobile-main .mobile-section .mobile-about p {
+  width: 95%;
 }
 
 footer {
