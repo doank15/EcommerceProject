@@ -60,6 +60,97 @@ h3 {
   font-weight: 700;
 }
 
+.wrapper {
+  background-color: var(--black);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.wrapper .main {
+  display: none;
+}
+.wrapper .mobile-main {
+  background-color: var(--black);
+  width: 90%;
+  height: 90%;
+  box-shadow: 0px 0px 100px var(--white);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  perspective: 40px;
+  transition: transform 0.5s;
+  border-bottom-left-radius: 34px;
+  border-top-right-radius: 34px;
+}
+.wrapper .mobile-main .mobile-section {
+  width: 90%;
+  height: 95%;
+  background: var(--black);
+  overflow: auto;
+}
+.wrapper .mobile-main .mobile-section .mobile-buttons {
+  margin: 0.6em 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+.wrapper .mobile-main .mobile-section .mobile-buttons .btn {
+  font-family: "Playfair Display", serif;
+  background-color: var(--black);
+  font-size: 1.4em;
+  border: none;
+}
+.wrapper .mobile-main .mobile-section .mobile-buttons .btn a {
+  text-decoration: none;
+  color: var(--white);
+}
+.wrapper .mobile-main .mobile-section .mobile-buttons .btn:first-child {
+  font-size: 40px;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo {
+  font-family: "Anton", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 10rem;
+  height: auto;
+  justify-content: center;
+  padding-left: 4px;
+  cursor: default;
+  transition: 0.3s;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo:hover {
+  text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(1) {
+  letter-spacing: 11px;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(2) {
+  letter-spacing: 0px;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(3) {
+  letter-spacing: -5px;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(4) {
+  letter-spacing: 7px;
+}
+.wrapper .mobile-main .mobile-section .mobile-logo span {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  line-height: 0.9;
+}
+
+footer {
+  display: none;
+}
+
 @media only screen and (min-width: 920px) {
   .wrapper {
     background-color: var(--black);
@@ -69,6 +160,9 @@ h3 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+  }
+  .wrapper .mobile-main {
+    display: none;
   }
   .wrapper .main {
     background-color: var(--black);
