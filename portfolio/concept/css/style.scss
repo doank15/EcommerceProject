@@ -93,7 +93,7 @@ h3 {
 						text-decoration: none;
 						color: var(--white);
 
-						&:hover(:not(:first-child)) {
+						&:hover {
 							text-shadow: 0px 0px 20px var(--white),
 								0px 0px 20px var(--white),
 								0px 0px 20px var(--white);
