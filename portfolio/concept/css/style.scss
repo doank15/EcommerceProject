@@ -40,6 +40,15 @@ h3 {
 	font-weight: 700;
 }
 
+footer {
+	position: absolute;
+	bottom: 2em;
+	opacity: 0.3;
+	font-size: 0.7em;
+	font-family: "Playfair Display", serif;
+	color: white;
+}
+
 //MOBILE
 .wrapper {
 	position: fixed;
@@ -170,8 +179,14 @@ h3 {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-around;
+				align-items: center;
 				height: 100%;
 				width: 100%;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
 			}
 
 			.mobile-hireme {
@@ -238,10 +253,6 @@ h3 {
 			}
 		}
 	}
-}
-
-footer {
-	display: none;
 }
 
 @media (orientation: landscape) {
@@ -373,6 +384,7 @@ footer {
 				.mobile-work {
 					display: flex;
 					flex-direction: row;
+					justify-content: center;
 					align-items: center;
 					height: 100vh;
 					width: 100%;
@@ -380,8 +392,8 @@ footer {
 					padding: 0;
 
 					img {
-						width: 30%;
-						height: 30%;
+						width: 90%;
+						height: auto;
 					}
 				}
 
@@ -449,10 +461,6 @@ footer {
 				}
 			}
 		}
-	}
-
-	footer {
-		display: none;
 	}
 }
 
@@ -717,15 +725,6 @@ footer {
 					}
 				}
 			}
-		}
-
-		footer {
-			position: absolute;
-			bottom: 2em;
-			opacity: 0.3;
-			font-size: 0.7em;
-			font-family: "Playfair Display", serif;
-			color: white;
 		}
 	}
 
