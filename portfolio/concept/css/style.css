@@ -103,6 +103,7 @@ footer {
   background: var(--black);
   overflow-x: hidden;
   margin: 1em 0;
+  z-index: 999;
 }
 .wrapper .mobile-main .mobile-section button.btn-up {
   display: block;

@@ -84,6 +84,7 @@ footer {
 			background: var(--black);
 			overflow-x: hidden;
 			margin: 1em 0;
+			z-index: 999;
 
 			button.btn-up {
 				display: block;
@@ -196,7 +197,7 @@ footer {
 				text-align: justify;
 				margin: 0;
 
-				.description{
+				.description {
 					width: 85%;
 				}
 
