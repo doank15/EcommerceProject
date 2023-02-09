@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
 :root {
   --black: #0c0c0f;
   --white: #e1e1e5;
@@ -123,8 +124,9 @@ footer {
   text-transform: uppercase;
   font-size: 10em;
   height: 100vh;
+  width: 100vw;
   justify-content: center;
-  padding-left: 4px;
+  padding-left: 0px;
   cursor: default;
   transition: 0.3s;
   margin-bottom: 0;
@@ -150,6 +152,39 @@ footer {
   padding: 0;
   margin: 0;
   line-height: 0.9;
+}
+.mobile-wrap .mobile-logo span.handwrite-logo {
+  position: absolute;
+  font-family: "Comforter Brush", cursive;
+  font-size: 0.3em;
+  right: -10px;
+  top: 300px;
+  transform: rotate(70deg);
+  opacity: 0.2;
+  text-shadow: none;
+  text-transform: none;
+}
+.mobile-wrap .mobile-logo img {
+  position: absolute;
+  width: 20%;
+  background-color: transparent;
+  right: 30px;
+  top: 460px;
+  filter: invert(1);
+  opacity: 0.2;
+}
+.mobile-wrap .mobile-logo span.hash-logo {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  font-family: "Comforter Brush", cursive;
+  font-size: 1em;
+  left: 230px;
+  bottom: 40px;
+  transform: rotate(-30deg);
+  opacity: 0.2;
+  text-shadow: none;
+  background-color: transparent;
 }
 .mobile-wrap .mobile-about {
   font-family: "Exo 2", sans-serif;
@@ -217,15 +252,17 @@ footer {
   background-color: transparent; /* Set a background color */
   color: var(--white); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 5px; /* Some padding */
+  padding: 4px 5px; /* Some padding */
   border-radius: 8px; /* Rounded corners */
   font-size: 1.2em; /* Increase font size */
   transform: rotate(-90deg);
-  box-shadow: 0 0 10px var(--white);
 }
 .mobile-wrap #myBtn i {
   padding: 0 4px;
   color: red;
+  background-color: transparent;
+}
+.mobile-wrap #myBtn:active {
   background-color: transparent;
 }
 .mobile-wrap footer {
