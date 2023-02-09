@@ -60,7 +60,6 @@ footer {
 .mobile-wrap {
 	background-color: var(--black);
 	color: var(--white);
-	
 
 	header {
 		position: fixed;
@@ -72,6 +71,7 @@ footer {
 		justify-content: space-evenly;
 		margin: 20px 0;
 		background-color: transparent;
+		z-index: 999;
 
 		button {
 			font-family: "Playfair Display", serif;
@@ -153,9 +153,10 @@ footer {
 			right: -10px;
 			top: 300px;
 			transform: rotate(70deg);
-			opacity: 0.2;
+			opacity: 0.1;
 			text-shadow: none;
 			text-transform: none;
+			z-index: 0;
 		}
 
 		img {
@@ -165,7 +166,8 @@ footer {
 			right: 30px;
 			top: 460px;
 			filter: invert(1);
-			opacity: 0.2;
+			opacity: 0.1;
+			z-index: 0;
 		}
 
 		span.hash-logo {
@@ -175,11 +177,44 @@ footer {
 			font-family: "Comforter Brush", cursive;
 			font-size: 1em;
 			left: 230px;
-			bottom: 40px;
+			bottom: 80px;
 			transform: rotate(-30deg);
-			opacity: 0.2;
+			opacity: 0.1;
 			text-shadow: none;
 			background-color: transparent;
+			line-height: 0;
+			z-index: 0;
+		}
+
+		span.hash-logo2 {
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			font-family: "Comforter Brush", cursive;
+			font-size: 1.3em;
+			left: 15px;
+			bottom: 25px;
+			transform: rotate(30deg);
+			opacity: 0.1;
+			text-shadow: none;
+			background-color: transparent;
+			line-height: 0;
+			z-index: 0;
+		}
+		span.hash-logo3 {
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			font-family: "Comforter Brush", cursive;
+			font-size: 1.3em;
+			right: 80px;
+			top: 150px;
+			transform: rotate(30deg);
+			opacity: 0.1;
+			text-shadow: none;
+			background-color: transparent;
+			line-height: 0;
+			z-index: 0;
 		}
 	}
 
