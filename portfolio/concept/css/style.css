@@ -15,6 +15,7 @@
   -moz-user-select: none; /* Firefox w przeszłości (stare wersje) */ /* Internet Explorer (>=10) / Edge      */
   user-select: none;
   scroll-behavior: smooth;
+  background-color: var(--black);
 }
 
 span::-moz-selection {
@@ -63,389 +64,343 @@ h3 {
 
 footer {
   position: absolute;
-  bottom: 3em;
+  bottom: 2em;
   opacity: 0.3;
   font-size: 0.7em;
   font-family: "Playfair Display", serif;
   color: white;
+  background-color: transparent;
 }
 
 .wrapper {
-  position: fixed;
-  top: 0;
-  background-color: var(--black);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-.wrapper .main {
   display: none;
 }
-.wrapper .mobile-main {
-  position: fixed;
+
+.mobile-wrap {
   background-color: var(--black);
-  width: 100vw;
-  height: 100vh;
-  box-shadow: 0px 0px 100px var(--white);
   color: var(--white);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  perspective: 40px;
-  transition: transform 0.5s;
 }
-.wrapper .mobile-main .mobile-section {
-  width: 100vw;
-  height: 100vh;
-  background: var(--black);
-  overflow-x: hidden;
-  margin: 1em 0;
-  z-index: 999;
-}
-.wrapper .mobile-main .mobile-section button.btn-up {
-  display: block;
+.mobile-wrap header {
   position: fixed;
-  bottom: 100px;
-  right: -30px;
-  transform: rotate(-90deg);
-  font-size: 1.4em;
-  background-color: transparent;
-  border: 2px solid var(--white);
-  border-radius: 40px;
-  padding: 5px 20px;
-}
-.wrapper .mobile-main .mobile-section button.btn-up a {
-  text-decoration: none;
-  color: var(--white);
-}
-.wrapper .mobile-main .mobile-section button.btn-up i {
-  margin-left: 10px;
-  color: red;
-  text-shadow: 0px 0px 4px white;
-}
-.wrapper .mobile-main .mobile-section .mobile-buttons {
-  position: sticky;
-  top: 25px;
-  margin: 0 20px;
+  top: 0;
+  width: 100vw;
+  height: auto;
   display: flex;
-  justify-content: space-around;
   flex-direction: row-reverse;
-}
-.wrapper .mobile-main .mobile-section .mobile-buttons .btn {
-  font-family: "Playfair Display", serif;
+  justify-content: space-evenly;
+  margin: 20px 0;
   background-color: transparent;
-  font-size: 1.4em;
-  border: none;
 }
-.wrapper .mobile-main .mobile-section .mobile-buttons .btn a {
-  text-decoration: none;
+.mobile-wrap header button {
+  font-family: "Playfair Display", serif;
+  border: none;
+  background-color: transparent;
   color: var(--white);
 }
-.wrapper .mobile-main .mobile-section .mobile-buttons .btn a:hover {
+.mobile-wrap header button a {
+  text-decoration: none;
+  font-size: 2em;
+  color: var(--white);
+  background-color: transparent;
+}
+.mobile-wrap header button a:hover {
   text-shadow: 0px 0px 20px var(--white), 0px 0px 20px var(--white), 0px 0px 20px var(--white);
 }
-.wrapper .mobile-main .mobile-section .mobile-buttons .btn:first-child {
-  font-size: 40px;
+.mobile-wrap header button:first-child {
+  font-size: 1.3em;
 }
-.wrapper .mobile-main .mobile-section .mobile-buttons .btn:first-child:hover {
+.mobile-wrap header button:first-child:hover {
   text-shadow: 0px 0px 20px #6e5494, 0px 0px 20px #6e5494, 0px 0px 20px #6e5494;
   color: #6e5494;
 }
-.wrapper .mobile-main .mobile-section .mobile-logo {
+.mobile-wrap header button .fa-github {
+  background-color: transparent;
+}
+.mobile-wrap .mobile-logo {
   font-family: "Anton", sans-serif;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  font-size: 10rem;
-  height: 100%;
-  width: 100%;
-  justify-content: flex-start;
-  margin-left: 4px;
-  margin-top: 0.3em;
+  font-size: 10em;
+  height: 100vh;
+  justify-content: center;
+  padding-left: 4px;
   cursor: default;
   transition: 0.3s;
+  margin-bottom: 0;
+}
+.mobile-wrap .mobile-logo:hover {
   text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
 }
-.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(1) {
+.mobile-wrap .mobile-logo :nth-child(1) {
   letter-spacing: 11px;
 }
-.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(2) {
+.mobile-wrap .mobile-logo :nth-child(2) {
   letter-spacing: 0px;
 }
-.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(3) {
+.mobile-wrap .mobile-logo :nth-child(3) {
   letter-spacing: -5px;
 }
-.wrapper .mobile-main .mobile-section .mobile-logo :nth-child(4) {
+.mobile-wrap .mobile-logo :nth-child(4) {
   letter-spacing: 7px;
 }
-.wrapper .mobile-main .mobile-section .mobile-logo span {
+.mobile-wrap .mobile-logo span {
   display: flex;
   align-items: center;
   padding: 0;
   margin: 0;
   line-height: 0.9;
 }
-.wrapper .mobile-main .mobile-section .mobile-about {
+.mobile-wrap .mobile-about {
   font-family: "Exo 2", sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  overflow-y: hidden;
-  text-align: justify;
-  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 7%;
 }
-.wrapper .mobile-main .mobile-section .mobile-about .description {
-  width: 85%;
-}
-.wrapper .mobile-main .mobile-section .mobile-about p {
-  width: 100%;
-}
-.wrapper .mobile-main .mobile-section .mobile-work {
+.mobile-wrap .mobile-work {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.wrapper .mobile-main .mobile-section .mobile-work img {
-  width: 100%;
-  height: auto;
-  margin: 10px 0;
-}
-.wrapper .mobile-main .mobile-section .mobile-hireme {
-  font-family: "Exo 2", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  overflow-y: hidden;
-  text-align: justify;
-}
-.wrapper .mobile-main .mobile-section .mobile-hireme .hireme-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 85%;
-  height: 80%;
-}
-.wrapper .mobile-main .mobile-section .mobile-hireme p {
-  width: 100%;
-  height: auto;
-}
-.wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: space-evenly;
-  margin: 0;
-  font-size: 5em;
-  width: 100%;
-  height: 80%;
 }
-.wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a {
+.mobile-wrap .mobile-work a img {
+  width: 100vw;
+}
+.mobile-wrap .mobile-hireme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Exo 2", sans-serif;
+}
+.mobile-wrap .mobile-hireme p,
+.mobile-wrap .mobile-hireme h3 {
+  margin: 0 7%;
+}
+.mobile-wrap .mobile-hireme .mobile-social-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 55vh;
+  margin-top: 3em;
+}
+.mobile-wrap .mobile-hireme .mobile-social-link a {
   text-decoration: none;
   color: var(--white);
-  transition: 0.3s;
 }
-.wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(1) {
-  text-shadow: 0px 0px 60px #dd4b39, 0px 0px 60px #dd4b39;
+.mobile-wrap .mobile-hireme .mobile-social-link a i {
+  font-size: 5em;
 }
-.wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(2) {
-  text-shadow: 0px 0px 60px #1877f2, 0px 0px 60px #1877f2;
+.mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(1) {
+  text-shadow: 0px 0px 20px #dd4b39, 0px 0px 20px #dd4b39;
 }
-.wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(3) {
-  text-shadow: 0px 0px 60px #f77737, 0px 0px 60px #f77737;
+.mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(2) {
+  text-shadow: 0px 0px 20px #1877f2, 0px 0px 20px #1877f2;
 }
-.wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(4) {
-  text-shadow: 0px 0px 60px #0077b5, 0px 0px 60px #0077b5;
+.mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(3) {
+  text-shadow: 0px 0px 20px #f77737, 0px 0px 20px #f77737;
+}
+.mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(4) {
+  text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
+}
+.mobile-wrap #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 4em; /* Place the button at the bottom of the page */
+  right: 0; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 2px solid var(--white); /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  color: var(--white); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1.2em; /* Increase font size */
+  opacity: 0.6;
+  transform: rotate(-90deg);
+  box-shadow: 0 0 10px var(--white);
+}
+.mobile-wrap #myBtn i {
+  padding: 0 4px;
+  color: red;
+}
+.mobile-wrap #myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  opacity: 1;
+}
+.mobile-wrap footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 2em;
+  opacity: 0.3;
+  font-size: 0.7em;
+  font-family: "Playfair Display", serif;
+  color: white;
+  background-color: transparent;
 }
 
 @media (orientation: landscape) {
-  .wrapper {
+  .mobile-wrap {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .mobile-wrap header {
     position: fixed;
     top: 0;
-    background-color: var(--black);
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .wrapper .main {
-    display: none;
-  }
-  .wrapper .mobile-main {
-    position: fixed;
-    background-color: var(--black);
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 0px 100px var(--white);
-    color: var(--white);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    perspective: 40px;
-    transition: transform 0.5s;
-  }
-  .wrapper .mobile-main .mobile-section {
-    width: 90%;
-    height: 95%;
-    background: var(--black);
-    overflow-x: hidden;
-  }
-  .wrapper .mobile-main .mobile-section .mobile-buttons {
-    position: sticky;
-    top: 0;
-    margin: 0 0 0.6em 0;
-    display: flex;
-    justify-content: space-around;
     flex-direction: row-reverse;
-  }
-  .wrapper .mobile-main .mobile-section .mobile-buttons .btn {
-    font-family: "Playfair Display", serif;
+    justify-content: space-evenly;
+    margin: 20px 0;
     background-color: transparent;
-    font-size: 1.4em;
-    border: none;
   }
-  .wrapper .mobile-main .mobile-section .mobile-buttons .btn a {
-    text-decoration: none;
+  .mobile-wrap header button {
+    font-family: "Playfair Display", serif;
+    border: none;
+    background-color: transparent;
     color: var(--white);
   }
-  .wrapper .mobile-main .mobile-section .mobile-buttons .btn a:hover(:not(:first-child)) {
+  .mobile-wrap header button a {
+    text-decoration: none;
+    font-size: 2em;
+    color: var(--white);
+    background-color: transparent;
+  }
+  .mobile-wrap header button a:hover {
     text-shadow: 0px 0px 20px var(--white), 0px 0px 20px var(--white), 0px 0px 20px var(--white);
   }
-  .wrapper .mobile-main .mobile-section .mobile-buttons .btn:first-child {
-    font-size: 40px;
+  .mobile-wrap header button:first-child {
+    font-size: 1.3em;
   }
-  .wrapper .mobile-main .mobile-section .mobile-buttons .btn:first-child:hover {
+  .mobile-wrap header button:first-child:hover {
     text-shadow: 0px 0px 20px #6e5494, 0px 0px 20px #6e5494, 0px 0px 20px #6e5494;
     color: #6e5494;
   }
-  .wrapper .mobile-main .mobile-section .mobile-logo {
+  .mobile-wrap header button .fa-github {
+    background-color: transparent;
+  }
+  .mobile-wrap .mobile-logo {
     font-family: "Anton", sans-serif;
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
     font-size: 5em;
-    height: 100%;
-    width: 100%;
-    justify-content: flex-start;
-    margin-left: 4px;
+    height: 100vh;
+    justify-content: flex-end;
+    padding-left: 4px;
     cursor: default;
     transition: 0.3s;
+    margin-bottom: 0;
+  }
+  .mobile-wrap .mobile-logo:hover {
     text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
   }
-  .wrapper .mobile-main .mobile-section .mobile-logo :nth-child(1) {
+  .mobile-wrap .mobile-logo :nth-child(1) {
     letter-spacing: 11px;
   }
-  .wrapper .mobile-main .mobile-section .mobile-logo :nth-child(2) {
+  .mobile-wrap .mobile-logo :nth-child(2) {
     letter-spacing: 0px;
   }
-  .wrapper .mobile-main .mobile-section .mobile-logo :nth-child(3) {
+  .mobile-wrap .mobile-logo :nth-child(3) {
     letter-spacing: -5px;
   }
-  .wrapper .mobile-main .mobile-section .mobile-logo :nth-child(4) {
+  .mobile-wrap .mobile-logo :nth-child(4) {
     letter-spacing: 7px;
   }
-  .wrapper .mobile-main .mobile-section .mobile-logo span {
+  .mobile-wrap .mobile-logo span {
     display: flex;
     align-items: center;
     padding: 0;
     margin: 0;
     line-height: 0.9;
   }
-  .wrapper .mobile-main .mobile-section .mobile-about {
+  .mobile-wrap .mobile-about {
     font-family: "Exo 2", sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
     height: 100vh;
-    width: 100%;
-    overflow-y: hidden;
-    text-align: justify;
-    margin: 0;
+    justify-content: center;
+    margin: 0 7%;
   }
-  .wrapper .mobile-main .mobile-section .mobile-about p {
-    width: 95%;
-  }
-  .wrapper .mobile-main .mobile-section .mobile-work {
+  .mobile-wrap .mobile-work {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 7%;
   }
-  .wrapper .mobile-main .mobile-section .mobile-work img {
+  .mobile-wrap .mobile-work a {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile-wrap .mobile-work a img {
     width: 90%;
-    height: auto;
   }
-  .wrapper .mobile-main .mobile-section .mobile-hireme {
-    font-family: "Exo 2", sans-serif;
+  .mobile-wrap .mobile-hireme {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 100vh;
+    font-family: "Exo 2", sans-serif;
+  }
+  .mobile-wrap .mobile-hireme p,
+  .mobile-wrap .mobile-hireme h3 {
+    margin: 0 7%;
+  }
+  .mobile-wrap .mobile-hireme .mobile-social-link {
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    overflow-y: hidden;
-    text-align: justify;
-  }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .hireme-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 100%;
-    height: 80%;
-  }
-  .wrapper .mobile-main .mobile-section .mobile-hireme p {
-    width: 95%;
-    height: auto;
-  }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0;
-    font-size: 5em;
-    width: 100%;
-    height: 80%;
+    justify-content: space-around;
+    height: 40vh;
+    margin-top: 0;
+    margin: 0 7%;
   }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a {
+  .mobile-wrap .mobile-hireme .mobile-social-link a {
     text-decoration: none;
     color: var(--white);
-    transition: 0.3s;
   }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(1) {
-    text-shadow: 0px 0px 60px #dd4b39, 0px 0px 60px #dd4b39;
+  .mobile-wrap .mobile-hireme .mobile-social-link a i {
+    font-size: 5em;
   }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(2) {
-    text-shadow: 0px 0px 60px #1877f2, 0px 0px 60px #1877f2;
+  .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(1) {
+    text-shadow: 0px 0px 20px #dd4b39, 0px 0px 20px #dd4b39;
   }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(3) {
-    text-shadow: 0px 0px 60px #f77737, 0px 0px 60px #f77737;
+  .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(2) {
+    text-shadow: 0px 0px 20px #1877f2, 0px 0px 20px #1877f2;
   }
-  .wrapper .mobile-main .mobile-section .mobile-hireme .mobile-social-link a:nth-child(4) {
-    text-shadow: 0px 0px 60px #0077b5, 0px 0px 60px #0077b5;
+  .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(3) {
+    text-shadow: 0px 0px 20px #f77737, 0px 0px 20px #f77737;
+  }
+  .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(4) {
+    text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
+  }
+  .mobile-wrap footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 2em;
+    opacity: 0.3;
+    font-size: 0.7em;
+    font-family: "Playfair Display", serif;
+    color: white;
+    background-color: transparent;
   }
 }
 @media only screen and (min-width: 920px) {
+  .mobile-wrap {
+    display: none;
+  }
   .wrapper {
     background-color: var(--black);
     width: 100vw;
@@ -454,9 +409,6 @@ footer {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  }
-  .wrapper .mobile-main {
-    display: none;
   }
   .wrapper .main {
     background-color: var(--black);
@@ -484,6 +436,7 @@ footer {
     cursor: default;
     transition: 0.3s;
     margin-bottom: 0;
+    border-bottom-left-radius: 34px;
   }
   .wrapper .main .logo:hover {
     text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
@@ -506,6 +459,7 @@ footer {
     padding: 0;
     margin: 0;
     line-height: 0.9;
+    background-color: transparent;
   }
   .wrapper .main .main-section {
     display: flex;
@@ -513,6 +467,8 @@ footer {
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-top-right-radius: 34px;
   }
   .wrapper .main .section {
     width: 80%;

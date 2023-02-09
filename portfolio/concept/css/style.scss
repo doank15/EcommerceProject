@@ -17,6 +17,7 @@
 	-ms-user-select: none; /* Internet Explorer (>=10) / Edge      */
 	user-select: none;
 	scroll-behavior: smooth;
+	background-color: var(--black);
 }
 
 span::selection {
@@ -42,462 +43,405 @@ h3 {
 
 footer {
 	position: absolute;
-	bottom: 3em;
+	bottom: 2em;
 	opacity: 0.3;
 	font-size: 0.7em;
 	font-family: "Playfair Display", serif;
 	color: white;
+	background-color: transparent;
 }
 
 //MOBILE
 .wrapper {
-	position: fixed;
-	top: 0;
-	background-color: var(--black);
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
+	display: none;
+}
 
-	.main {
-		display: none;
+.mobile-wrap {
+	background-color: var(--black);
+	color: var(--white);
+
+	header {
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: auto;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+		margin: 20px 0;
+		background-color: transparent;
+
+		button {
+			font-family: "Playfair Display", serif;
+			border: none;
+			background-color: transparent;
+			color: var(--white);
+
+			a {
+				text-decoration: none;
+				font-size: 2em;
+				color: var(--white);
+				background-color: transparent;
+
+				&:hover {
+					text-shadow: 0px 0px 20px var(--white),
+						0px 0px 20px var(--white), 0px 0px 20px var(--white);
+				}
+			}
+
+			&:first-child {
+				font-size: 1.3em;
+
+				&:hover {
+					text-shadow: 0px 0px 20px #6e5494, 0px 0px 20px #6e5494,
+						0px 0px 20px #6e5494;
+					color: #6e5494;
+				}
+			}
+
+			.fa-github {
+				background-color: transparent;
+			}
+		}
 	}
 
-	.mobile-main {
-		position: fixed;
-		background-color: var(--black);
-		width: 100vw;
-		height: 100vh;
-		box-shadow: 0px 0px 100px var(--white);
-		color: var(--white);
+	.mobile-logo {
+		font-family: "Anton", sans-serif;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
+		flex-direction: column;
+		text-transform: uppercase;
+		font-size: 10em;
+		height: 100vh;
 		justify-content: center;
-		perspective: 40px;
-		transition: transform 0.5s;
+		padding-left: 4px;
+		cursor: default;
+		transition: 0.3s;
+		margin-bottom: 0;
 
-		.mobile-section {
+		&:hover {
+			text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+		}
+
+		:nth-child(1) {
+			letter-spacing: 11px;
+		}
+		:nth-child(2) {
+			letter-spacing: 0px;
+		}
+		:nth-child(3) {
+			letter-spacing: -5px;
+		}
+		:nth-child(4) {
+			letter-spacing: 7px;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+			line-height: 0.9;
+		}
+	}
+
+	.mobile-about {
+		font-family: "Exo 2", sans-serif;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		justify-content: center;
+		margin: 0 7%;
+	}
+
+	.mobile-work {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		justify-content: space-evenly;
+
+		a {
+			img {
+				width: 100vw;
+			}
+		}
+	}
+
+	.mobile-hireme {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+		font-family: "Exo 2", sans-serif;
+
+		p,
+		h3 {
+			margin: 0 7%;
+		}
+
+		.mobile-social-link {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 55vh;
+			margin-top: 3em;
+
+			a {
+				text-decoration: none;
+				color: var(--white);
+
+				i {
+					font-size: 5em;
+				}
+
+				&:nth-child(1) {
+					text-shadow: 0px 0px 20px #dd4b39, 0px 0px 20px #dd4b39;
+				}
+
+				&:nth-child(2) {
+					text-shadow: 0px 0px 20px #1877f2, 0px 0px 20px #1877f2;
+				}
+
+				&:nth-child(3) {
+					text-shadow: 0px 0px 20px #f77737, 0px 0px 20px #f77737;
+				}
+
+				&:nth-child(4) {
+					text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
+				}
+			}
+		}
+	}
+
+	#myBtn {
+		display: none; /* Hidden by default */
+		position: fixed; /* Fixed/sticky position */
+		bottom: 4em; /* Place the button at the bottom of the page */
+		right: 0; /* Place the button 30px from the right */
+		z-index: 99; /* Make sure it does not overlap */
+		border: 2px solid var(--white); /* Remove borders */
+		outline: none; /* Remove outline */
+		background-color: transparent; /* Set a background color */
+		color: var(--white); /* Text color */
+		cursor: pointer; /* Add a mouse pointer on hover */
+		padding: 5px; /* Some padding */
+		border-radius: 8px; /* Rounded corners */
+		font-size: 1.2em; /* Increase font size */
+		opacity: 0.6;
+		transform: rotate(-90deg);
+		box-shadow: 0 0 10px var(--white);
+
+		i {
+			padding:0 4px;
+			color: red;
+		}
+
+		&:hover {
+			background-color: #555; /* Add a dark-grey background on hover */
+			opacity: 1;
+		}
+	}
+
+	footer {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		bottom: 2em;
+		opacity: 0.3;
+		font-size: 0.7em;
+		font-family: "Playfair Display", serif;
+		color: white;
+		background-color: transparent;
+	}
+}
+
+//MOBILE-LANDSCAPE
+@media (orientation: landscape) {
+	.mobile-wrap {
+		background-color: var(--black);
+		color: var(--white);
+
+		header {
+			position: fixed;
+			top: 0;
 			width: 100vw;
-			height: 100vh;
-			background: var(--black);
-			overflow-x: hidden;
-			margin: 1em 0;
-			z-index: 999;
+			height: auto;
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-evenly;
+			margin: 20px 0;
+			background-color: transparent;
 
-			button.btn-up {
-				display: block;
-				position: fixed;
-				bottom: 100px;
-				right: -30px;
-				transform: rotate(-90deg);
-				font-size: 1.4em;
+			button {
+				font-family: "Playfair Display", serif;
+				border: none;
 				background-color: transparent;
-				border: 2px solid var(--white);
-				border-radius: 40px;
-				padding: 5px 20px;
+				color: var(--white);
+
+				a {
+					text-decoration: none;
+					font-size: 2em;
+					color: var(--white);
+					background-color: transparent;
+
+					&:hover {
+						text-shadow: 0px 0px 20px var(--white),
+							0px 0px 20px var(--white), 0px 0px 20px var(--white);
+					}
+				}
+
+				&:first-child {
+					font-size: 1.3em;
+
+					&:hover {
+						text-shadow: 0px 0px 20px #6e5494, 0px 0px 20px #6e5494,
+							0px 0px 20px #6e5494;
+						color: #6e5494;
+					}
+				}
+
+				.fa-github {
+					background-color: transparent;
+				}
+			}
+		}
+
+		.mobile-logo {
+			font-family: "Anton", sans-serif;
+			display: flex;
+			flex-direction: column;
+			text-transform: uppercase;
+			font-size: 5em;
+			height: 100vh;
+			justify-content: flex-end;
+			padding-left: 4px;
+			cursor: default;
+			transition: 0.3s;
+			margin-bottom: 0;
+
+			&:hover {
+				text-shadow: 0px 0px 20px red, 0px 0px 20px red,
+					0px 0px 20px red;
+			}
+
+			:nth-child(1) {
+				letter-spacing: 11px;
+			}
+			:nth-child(2) {
+				letter-spacing: 0px;
+			}
+			:nth-child(3) {
+				letter-spacing: -5px;
+			}
+			:nth-child(4) {
+				letter-spacing: 7px;
+			}
+
+			span {
+				display: flex;
+				align-items: center;
+				padding: 0;
+				margin: 0;
+				line-height: 0.9;
+			}
+		}
+
+		.mobile-about {
+			font-family: "Exo 2", sans-serif;
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			justify-content: center;
+			margin: 0 7%;
+		}
+
+		.mobile-work {
+			display: flex;
+			flex-direction: row;
+			height: 100vh;
+			width: auto;
+			justify-content: space-around;
+			align-items: center;
+			margin: 0 7%;
+
+			a {
+				display: flex;
+				justify-content: center;
+				img {
+					width: 90%;
+				}
+			}
+		}
+
+		.mobile-hireme {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
+			font-family: "Exo 2", sans-serif;
+
+			p,
+			h3 {
+				margin: 0 7%;
+			}
+
+			.mobile-social-link {
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				justify-content: space-around;
+				height: 40vh;
+				margin-top: 0;
+				margin: 0 7%;
 
 				a {
 					text-decoration: none;
 					color: var(--white);
-				}
 
-				i {
-					margin-left: 10px;
-					color: red;
-					text-shadow: 0px 0px 4px white;
-				}
-			}
-
-			.mobile-buttons {
-				position: sticky;
-				top: 25px;
-				margin: 0 20px;
-				display: flex;
-				justify-content: space-around;
-				flex-direction: row-reverse;
-
-				.btn {
-					font-family: "Playfair Display", serif;
-					background-color: transparent;
-					font-size: 1.4em;
-					border: none;
-
-					a {
-						text-decoration: none;
-						color: var(--white);
-
-						&:hover {
-							text-shadow: 0px 0px 20px var(--white),
-								0px 0px 20px var(--white),
-								0px 0px 20px var(--white);
-						}
-					}
-
-					&:first-child {
-						font-size: 40px;
-
-						&:hover {
-							text-shadow: 0px 0px 20px #6e5494,
-								0px 0px 20px #6e5494, 0px 0px 20px #6e5494;
-							color: #6e5494;
-						}
-					}
-				}
-			}
-
-			.mobile-logo {
-				font-family: "Anton", sans-serif;
-				display: flex;
-				flex-direction: column;
-				text-transform: uppercase;
-				font-size: 10rem;
-				height: 100%;
-				width: 100%;
-				justify-content: flex-start;
-				margin-left: 4px;
-				margin-top: 0.3em;
-				cursor: default;
-				transition: 0.3s;
-				text-shadow: 0px 0px 20px red, 0px 0px 20px red,
-					0px 0px 20px red;
-
-				:nth-child(1) {
-					letter-spacing: 11px;
-				}
-				:nth-child(2) {
-					letter-spacing: 0px;
-				}
-				:nth-child(3) {
-					letter-spacing: -5px;
-				}
-				:nth-child(4) {
-					letter-spacing: 7px;
-				}
-
-				span {
-					display: flex;
-					align-items: center;
-					padding: 0;
-					margin: 0;
-					line-height: 0.9;
-				}
-			}
-
-			.mobile-about {
-				font-family: "Exo 2", sans-serif;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-				height: 100%;
-				width: 100%;
-				overflow-y: hidden;
-				text-align: justify;
-				margin: 0;
-
-				.description {
-					width: 85%;
-				}
-
-				p {
-					width: 100%;
-				}
-			}
-
-			.mobile-work {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				height: 100%;
-				width: 100%;
-
-				img {
-					width: 100%;
-					height: auto;
-					margin: 10px 0;
-				}
-			}
-
-			.mobile-hireme {
-				font-family: "Exo 2", sans-serif;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-				height: 100%;
-				width: 100%;
-				overflow-y: hidden;
-				text-align: justify;
-
-				.hireme-section {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: flex-start;
-					width: 85%;
-					height: 80%;
-				}
-
-				p {
-					width: 100%;
-					height: auto;
-				}
-
-				.mobile-social-link {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: space-evenly;
-					margin: 0;
-					font-size: 5em;
-					width: 100%;
-					height: 80%;
-
-					a {
-						text-decoration: none;
-						color: var(--white);
-						transition: 0.3s;
-
-						&:nth-child(1) {
-							text-shadow: 0px 0px 60px #dd4b39,
-								0px 0px 60px #dd4b39;
-						}
-
-						&:nth-child(2) {
-							text-shadow: 0px 0px 60px #1877f2,
-								0px 0px 60px #1877f2;
-						}
-
-						&:nth-child(3) {
-							text-shadow: 0px 0px 60px #f77737,
-								0px 0px 60px #f77737;
-						}
-
-						&:nth-child(4) {
-							text-shadow: 0px 0px 60px #0077b5,
-								0px 0px 60px #0077b5;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media (orientation: landscape) {
-	.wrapper {
-		position: fixed;
-		top: 0;
-		background-color: var(--black);
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		overflow: hidden;
-
-		.main {
-			display: none;
-		}
-
-		.mobile-main {
-			position: fixed;
-			background-color: var(--black);
-			width: 100%;
-			height: 100%;
-			box-shadow: 0px 0px 100px var(--white);
-			color: var(--white);
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			perspective: 40px;
-			transition: transform 0.5s;
-
-			.mobile-section {
-				width: 90%;
-				height: 95%;
-				background: var(--black);
-				overflow-x: hidden;
-
-				.mobile-buttons {
-					position: sticky;
-					top: 0;
-					margin: 0 0 0.6em 0;
-					display: flex;
-					justify-content: space-around;
-					flex-direction: row-reverse;
-
-					.btn {
-						font-family: "Playfair Display", serif;
-						background-color: transparent;
-						font-size: 1.4em;
-						border: none;
-
-						a {
-							text-decoration: none;
-							color: var(--white);
-
-							&:hover(:not(:first-child)) {
-								text-shadow: 0px 0px 20px var(--white),
-									0px 0px 20px var(--white),
-									0px 0px 20px var(--white);
-							}
-						}
-
-						&:first-child {
-							font-size: 40px;
-
-							&:hover {
-								text-shadow: 0px 0px 20px #6e5494,
-									0px 0px 20px #6e5494, 0px 0px 20px #6e5494;
-								color: #6e5494;
-							}
-						}
-					}
-				}
-
-				.mobile-logo {
-					font-family: "Anton", sans-serif;
-					display: flex;
-					flex-direction: column;
-					text-transform: uppercase;
-					font-size: 5em;
-					height: 100%;
-					width: 100%;
-					justify-content: flex-start;
-					margin-left: 4px;
-					cursor: default;
-					transition: 0.3s;
-					text-shadow: 0px 0px 20px red, 0px 0px 20px red,
-						0px 0px 20px red;
-
-					:nth-child(1) {
-						letter-spacing: 11px;
-					}
-					:nth-child(2) {
-						letter-spacing: 0px;
-					}
-					:nth-child(3) {
-						letter-spacing: -5px;
-					}
-					:nth-child(4) {
-						letter-spacing: 7px;
-					}
-
-					span {
-						display: flex;
-						align-items: center;
-						padding: 0;
-						margin: 0;
-						line-height: 0.9;
-					}
-				}
-
-				.mobile-about {
-					font-family: "Exo 2", sans-serif;
-					display: flex;
-					justify-content: center;
-					align-items: flex-start;
-					flex-direction: column;
-					height: 100vh;
-					width: 100%;
-					overflow-y: hidden;
-					text-align: justify;
-					margin: 0;
-
-					p {
-						width: 95%;
-					}
-				}
-
-				.mobile-work {
-					display: flex;
-					flex-direction: row;
-					justify-content: center;
-					align-items: center;
-					height: 100vh;
-					width: 100%;
-					margin: 0;
-					padding: 0;
-
-					img {
-						width: 90%;
-						height: auto;
-					}
-				}
-
-				.mobile-hireme {
-					font-family: "Exo 2", sans-serif;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					flex-direction: column;
-					height: 100%;
-					width: 100%;
-					overflow-y: hidden;
-					text-align: justify;
-
-					.hireme-section {
-						display: flex;
-						flex-direction: column;
-						justify-content: flex-end;
-						align-items: flex-start;
-						width: 100%;
-						height: 80%;
-					}
-
-					p {
-						width: 95%;
-						height: auto;
-					}
-
-					.mobile-social-link {
-						display: flex;
-						flex-direction: row;
-						align-items: center;
-						justify-content: space-evenly;
-						margin: 0;
+					i {
 						font-size: 5em;
-						width: 100%;
-						height: 80%;
+					}
 
-						a {
-							text-decoration: none;
-							color: var(--white);
-							transition: 0.3s;
+					&:nth-child(1) {
+						text-shadow: 0px 0px 20px #dd4b39, 0px 0px 20px #dd4b39;
+					}
 
-							&:nth-child(1) {
-								text-shadow: 0px 0px 60px #dd4b39,
-									0px 0px 60px #dd4b39;
-							}
+					&:nth-child(2) {
+						text-shadow: 0px 0px 20px #1877f2, 0px 0px 20px #1877f2;
+					}
 
-							&:nth-child(2) {
-								text-shadow: 0px 0px 60px #1877f2,
-									0px 0px 60px #1877f2;
-							}
+					&:nth-child(3) {
+						text-shadow: 0px 0px 20px #f77737, 0px 0px 20px #f77737;
+					}
 
-							&:nth-child(3) {
-								text-shadow: 0px 0px 60px #f77737,
-									0px 0px 60px #f77737;
-							}
-
-							&:nth-child(4) {
-								text-shadow: 0px 0px 60px #0077b5,
-									0px 0px 60px #0077b5;
-							}
-						}
+					&:nth-child(4) {
+						text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
 					}
 				}
 			}
+		}
+
+		footer {
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			position: fixed;
+			bottom: 2em;
+			opacity: 0.3;
+			font-size: 0.7em;
+			font-family: "Playfair Display", serif;
+			color: white;
+			background-color: transparent;
 		}
 	}
 }
 
 //DESKTOP
 @media only screen and (min-width: 920px) {
+	.mobile-wrap {
+		display: none;
+	}
 	.wrapper {
 		background-color: var(--black);
 		width: 100vw;
@@ -506,10 +450,6 @@ footer {
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-
-		.mobile-main {
-			display: none;
-		}
 
 		.main {
 			background-color: var(--black);
@@ -537,6 +477,7 @@ footer {
 				cursor: default;
 				transition: 0.3s;
 				margin-bottom: 0;
+				border-bottom-left-radius: 34px;
 
 				&:hover {
 					text-shadow: 0px 0px 20px red, 0px 0px 20px red,
@@ -562,6 +503,7 @@ footer {
 					padding: 0;
 					margin: 0;
 					line-height: 0.9;
+					background-color: transparent;
 				}
 			}
 
@@ -572,6 +514,8 @@ footer {
 				align-items: center;
 				width: 100%;
 				height: 100%;
+				overflow: hidden;
+				border-top-right-radius: 34px;
 			}
 			.section {
 				width: 80%;
