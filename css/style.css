@@ -226,6 +226,7 @@ footer {
 .mobile-wrap #myBtn i {
   padding: 0 4px;
   color: red;
+  background-color: transparent;
 }
 .mobile-wrap footer {
   width: 100vw;
