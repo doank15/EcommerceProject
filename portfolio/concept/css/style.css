@@ -220,17 +220,15 @@ footer {
   padding: 5px; /* Some padding */
   border-radius: 8px; /* Rounded corners */
   font-size: 1.2em; /* Increase font size */
-  opacity: 0.6;
   transform: rotate(-90deg);
-  box-shadow: 0 0 10px var(--white);
 }
 .mobile-wrap #myBtn i {
   padding: 0 4px;
   color: red;
+  background-color: transparent;
 }
-.mobile-wrap #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-  opacity: 1;
+.mobile-wrap #myBtn:active {
+  background-color: transparent;
 }
 .mobile-wrap footer {
   width: 100vw;

@@ -227,17 +227,16 @@ footer {
 		padding: 5px; /* Some padding */
 		border-radius: 8px; /* Rounded corners */
 		font-size: 1.2em; /* Increase font size */
-		opacity: 0.6;
 		transform: rotate(-90deg);
-		box-shadow: 0 0 10px var(--white);
+		//box-shadow: 0 0 10px var(--white);
 
 		i {
 			padding: 0 4px;
 			color: red;
+			background-color: transparent;
 		}
-
-		&:hover {
-			opacity: 1;
+		&:active{
+			background-color: transparent;
 		}
 	}
 
