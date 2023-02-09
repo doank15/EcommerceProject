@@ -232,12 +232,11 @@ footer {
 		box-shadow: 0 0 10px var(--white);
 
 		i {
-			padding:0 4px;
+			padding: 0 4px;
 			color: red;
 		}
 
 		&:hover {
-			background-color: #555; /* Add a dark-grey background on hover */
 			opacity: 1;
 		}
 	}
