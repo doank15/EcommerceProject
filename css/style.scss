@@ -119,7 +119,8 @@ footer {
 		margin-bottom: 0;
 
 		&:hover {
-			text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+			text-shadow: 0px 0px 20px blue, 0px 0px 20px skyblue,
+				0px 0px 20px skyblue;
 		}
 
 		:nth-child(1) {
@@ -208,6 +209,9 @@ footer {
 
 				&:nth-child(4) {
 					text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
+				}
+				&:nth-child(5) {
+					text-shadow: 0px 0px 20px var(--white);
 				}
 			}
 		}
@@ -319,8 +323,8 @@ footer {
 			margin-bottom: 0;
 
 			&:hover {
-				text-shadow: 0px 0px 20px red, 0px 0px 20px red,
-					0px 0px 20px red;
+				text-shadow: 0px 0px 20px blue, 0px 0px 20px skyblue,
+					0px 0px 20px skyblue;
 			}
 
 			:nth-child(1) {
@@ -416,6 +420,11 @@ footer {
 					&:nth-child(4) {
 						text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
 					}
+
+					&:nth-child(5) {
+						text-shadow: 0px 0px 20px var(--white),
+							0px 0px 20px var(--white);
+					}
 				}
 			}
 		}
@@ -475,11 +484,13 @@ footer {
 				cursor: default;
 				transition: 0.3s;
 				margin-bottom: 0;
+				margin-right: 0.2em;
 				border-bottom-left-radius: 34px;
+				overflow: visible;
 
 				&:hover {
-					text-shadow: 0px 0px 20px red, 0px 0px 20px red,
-						0px 0px 20px red;
+					text-shadow: 0px 0px 20px blue, 0px 0px 20px skyblue,
+						0px 0px 20px skyblue;
 				}
 
 				:nth-child(1) {
@@ -546,6 +557,14 @@ footer {
 					}
 					&:nth-child(4) {
 						right: 330px;
+					}
+					&:nth-child(5) {
+						right: 450px;
+					}
+
+					a {
+						text-decoration: none;
+						color: var(--white);
 					}
 
 					.fa-github {
@@ -692,6 +711,10 @@ footer {
 									&:nth-child(4):hover {
 										text-shadow: 0px 0px 20px #0077b5,
 											0px 0px 20px #0077b5;
+									}
+									&:nth-child(5):hover {
+										text-shadow: 0px 0px 20px var(--white),
+											0px 0px 20px var(--white);
 									}
 								}
 							}

@@ -130,7 +130,7 @@ footer {
   margin-bottom: 0;
 }
 .mobile-wrap .mobile-logo:hover {
-  text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+  text-shadow: 0px 0px 20px blue, 0px 0px 20px skyblue, 0px 0px 20px skyblue;
 }
 .mobile-wrap .mobile-logo :nth-child(1) {
   letter-spacing: 11px;
@@ -205,6 +205,9 @@ footer {
 }
 .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(4) {
   text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
+}
+.mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(5) {
+  text-shadow: 0px 0px 20px var(--white);
 }
 .mobile-wrap #myBtn {
   display: none; /* Hidden by default */
@@ -298,7 +301,7 @@ footer {
     margin-bottom: 0;
   }
   .mobile-wrap .mobile-logo:hover {
-    text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+    text-shadow: 0px 0px 20px blue, 0px 0px 20px skyblue, 0px 0px 20px skyblue;
   }
   .mobile-wrap .mobile-logo :nth-child(1) {
     letter-spacing: 11px;
@@ -382,6 +385,9 @@ footer {
   .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(4) {
     text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
   }
+  .mobile-wrap .mobile-hireme .mobile-social-link a:nth-child(5) {
+    text-shadow: 0px 0px 20px var(--white), 0px 0px 20px var(--white);
+  }
   .mobile-wrap footer {
     width: 100vw;
     display: flex;
@@ -434,10 +440,12 @@ footer {
     cursor: default;
     transition: 0.3s;
     margin-bottom: 0;
+    margin-right: 0.2em;
     border-bottom-left-radius: 34px;
+    overflow: visible;
   }
   .wrapper .main .logo:hover {
-    text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+    text-shadow: 0px 0px 20px blue, 0px 0px 20px skyblue, 0px 0px 20px skyblue;
   }
   .wrapper .main .logo :nth-child(1) {
     letter-spacing: 11px;
@@ -500,6 +508,13 @@ footer {
   }
   .wrapper .main .section .tablink:nth-child(4) {
     right: 330px;
+  }
+  .wrapper .main .section .tablink:nth-child(5) {
+    right: 450px;
+  }
+  .wrapper .main .section .tablink a {
+    text-decoration: none;
+    color: var(--white);
   }
   .wrapper .main .section .tablink .fa-github {
     font-size: 1.8em;
@@ -623,6 +638,9 @@ footer {
   }
   .wrapper .main .section .tabcontent .hireme-content .description .social-link a:nth-child(4):hover {
     text-shadow: 0px 0px 20px #0077b5, 0px 0px 20px #0077b5;
+  }
+  .wrapper .main .section .tabcontent .hireme-content .description .social-link a:nth-child(5):hover {
+    text-shadow: 0px 0px 20px var(--white), 0px 0px 20px var(--white);
   }
   *::-webkit-scrollbar {
     width: 14px;

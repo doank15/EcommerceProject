@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;400&family=Press+Start+2P&display=swap");
+//font-family: 'Jost', sans-serif;
+//font-family: 'Press Start 2P', cursive;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+}
+
+html {
+	overflow: hidden;
+	max-height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+}
+
+.wrapper {
+	font-family: "Press Start 2P", cursive;
+	background-color: white;
+
+	section.one {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: aqua;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.hero {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			.welcome {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				h1 {
+					font-size: 5rem;
+				}
+
+				h2 {
+					font-size: 2.5rem;
+				}
+			}
+
+			.mario {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				transform: translateX(-7em);
+				animation: jump 1.2s infinite ease-out;
+
+				img {
+					width: 8em;
+				}
+
+				@keyframes jump {
+					0%,
+					100% {
+					  transform: translate(-7em, 0%);
+					}
+					50% {
+					  transform: translate(-7em, -50%);
+					}
+				  }
+			}
+		}
+
+		.arrows {
+			display: flex;
+			position: relative;
+			bottom: 2em;
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.two {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		//background-color: chartreuse;
+
+		.description {
+			p {
+				margin: 0 8em;
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -7.9em;
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.three {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: crimson;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.html-section {
+			display: flex;
+			flex-direction: row;
+			width: 85%;
+
+			.logo-html {
+				display: flex;
+				align-items: center;
+				margin: 0 2em 0 0;
+				img {
+					width: 12em;
+				}
+			}
+
+			.html-desc {
+				p {
+				}
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -8.3em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.four {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: tomato;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.css-section {
+			display: flex;
+			flex-direction: row;
+			width: 85%;
+
+			.logo-css {
+				display: flex;
+				align-items: center;
+				margin: 0 3.5em 0 2em;
+				img {
+					width: 8.5em;
+				}
+			}
+
+			.css-desc {
+				p {
+				}
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -8.3em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.five {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: cornflowerblue;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.js-section {
+			display: flex;
+			flex-direction: row;
+			width: 85%;
+
+			.logo-js {
+				display: flex;
+				align-items: center;
+				margin: 0 3.5em 0 2em;
+				img {
+					width: 8.5em;
+				}
+			}
+
+			.js-desc {
+				p {
+				}
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -8.3em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.six {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: darkblue;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.other-section {
+			p {
+				margin: 0 8em;
+			}
+		}
+
+		.other-logos {
+			width: 90%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			margin: 4em 0 0 0;
+			justify-content: space-evenly;
+			align-items: center;
+
+			img {
+				width: 5em;
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -6.5em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.seven {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: darkgreen;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.figma-section {
+			display: flex;
+			flex-direction: row;
+			width: 85%;
+			margin: 1em 0;
+
+			.logo-figma {
+				display: flex;
+				align-items: flex-start;
+				margin: 0 3.5em 0 2em;
+				img {
+					width: 8.5em;
+				}
+			}
+
+			.figma-desc {
+				p {
+				}
+			}
+		}
+
+		.canva-section {
+			display: flex;
+			flex-direction: row;
+			width: 85%;
+			margin: 1em 0;
+
+			.logo-canva {
+				display: flex;
+				align-items: flex-start;
+				margin: 0 3.5em 0 2em;
+				img {
+					width: 8.5em;
+				}
+			}
+
+			.canva-desc {
+				p {
+				}
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -1.85em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.eight {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: darkkhaki;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+
+		.description {
+			p {
+				margin: 3em 8em 0 8em;
+			}
+		}
+
+		.card-container {
+			display: flex;
+			margin: 0 8em;
+			justify-content: space-evenly;
+			overflow: hidden;
+
+			.card {
+				width: 25%;
+				margin: 1em;
+				background-color: black;
+				color: white;
+				border-radius: 8px;
+				transition: 0.5s;
+				opacity: 0.8;
+				filter: grayscale(1);
+
+				a {
+					text-decoration: none;
+					color: white;
+
+					img {
+						width: 100%;
+					}
+
+					.card-desc {
+						margin: 1em;
+						p {
+							font-size: 0.8rem;
+						}
+					}
+				}
+
+				&:hover {
+					opacity: 1;
+					filter: grayscale(0);
+				}
+			}
+		}
+		.arrows {
+			position: relative;
+			bottom: -0.2em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.nine {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: darkorange;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.contact {
+			p {
+				margin: 0 8em;
+			}
+		}
+
+		.contact-logos {
+			width: 90%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			margin: 4em 0 0 0;
+			justify-content: space-evenly;
+			align-items: center;
+
+			a {
+				opacity: 0.8;
+				transition: 0.5s;
+				img {
+					width: 5em;
+				}
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -6.5em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+
+			.arrow-down {
+				transform: rotate(90deg);
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	section.ten {
+		scroll-snap-align: start;
+		width: 100%;
+		height: 100vh;
+		//background-color: darkslateblue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.the-end {
+			p {
+				font-size: 5em;
+			}
+		}
+
+		.arrows {
+			position: relative;
+			bottom: -14em;
+
+			.arrow-up {
+				transform: rotate(-90deg) translateY(0.35em);
+				margin-bottom: 1em;
+
+				span {
+					font-size: 2.2em;
+
+					a {
+						text-decoration: none;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		position: fixed;
+		bottom: 1em;
+		right: 1em;
+		font-size: 0.5rem;
+	}
+}
