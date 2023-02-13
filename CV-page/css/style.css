@@ -584,7 +584,7 @@ html {
     }
   }
   .wrapper section.one .arrows {
-    display: flex;
+    display: none;
     position: relative;
     bottom: 8em;
   }
@@ -659,7 +659,7 @@ html {
     margin: 0 0 3em 0;
   }
   .wrapper section.three .html-section .logo-html img {
-    width: 12em;
+    width: 8em;
   }
   .wrapper section.three .html-section .html-desc p {
     margin: 0 1em;
@@ -713,7 +713,7 @@ html {
     margin: 0 0 3em 0;
   }
   .wrapper section.four .css-section .logo-css img {
-    width: 8.5em;
+    width: 5.5em;
   }
   .wrapper section.four .css-section .css-desc p {
     margin: 0 1em;
@@ -767,7 +767,7 @@ html {
     margin: 0 0 3em 0;
   }
   .wrapper section.five .js-section .logo-js img {
-    width: 8.5em;
+    width: 5.5em;
   }
   .wrapper section.five .js-section .js-desc p {
     margin: 0 1em;
@@ -940,7 +940,7 @@ html {
     justify-content: center;
   }
   .wrapper section.eight .description p {
-    margin: 0 1em;
+    margin: 0 1em 1em 1em;
     font-size: 0.8em;
   }
   .wrapper section.eight .card-container {
@@ -959,6 +959,7 @@ html {
     transition: 0.5s;
     opacity: 0.8;
     filter: grayscale(1);
+    margin: 0.3em;
   }
   .wrapper section.eight .card-container .card a {
     text-decoration: none;

@@ -751,7 +751,7 @@ html {
 			}
 
 			.arrows {
-				display: flex;
+				display: none;
 				position: relative;
 				bottom: 8em;
 
@@ -843,7 +843,7 @@ html {
 					align-items: center;
 					margin: 0 0 3em 0;
 					img {
-						width: 12em;
+						width: 8em;
 					}
 				}
 
@@ -911,7 +911,7 @@ html {
 					align-items: center;
 					margin: 0 0 3em 0;
 					img {
-						width: 8.5em;
+						width: 5.5em;
 					}
 				}
 
@@ -979,7 +979,7 @@ html {
 					align-items: center;
 					margin: 0 0 3em 0;
 					img {
-						width: 8.5em;
+						width: 5.5em;
 					}
 				}
 
@@ -1203,7 +1203,7 @@ html {
 
 			.description {
 				p {
-					margin: 0 1em;
+					margin: 0 1em 1em 1em;
 					font-size: 0.8em;
 				}
 			}
@@ -1224,6 +1224,7 @@ html {
 					transition: 0.5s;
 					opacity: 0.8;
 					filter: grayscale(1);
+					margin: 0.3em;
 
 					a {
 						text-decoration: none;
