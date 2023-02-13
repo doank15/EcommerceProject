@@ -71,12 +71,12 @@ html {
 				@keyframes jump {
 					0%,
 					100% {
-					  transform: translate(-7em, 0%);
+						transform: translate(-7em, 0%);
 					}
 					50% {
-					  transform: translate(-7em, -50%);
+						transform: translate(-7em, -50%);
 					}
-				  }
+				}
 			}
 		}
 
@@ -347,23 +347,30 @@ html {
 		align-items: center;
 		justify-content: center;
 
-		.other-section {
-			p {
-				margin: 0 8em;
-			}
-		}
-
-		.other-logos {
-			width: 90%;
-			height: auto;
+		.other {
 			display: flex;
-			flex-direction: row;
-			margin: 4em 0 0 0;
-			justify-content: space-evenly;
+			flex-direction: column;
+			justify-content: center;
 			align-items: center;
 
-			img {
-				width: 5em;
+			.other-section {
+				p {
+					margin: 0 8em;
+				}
+			}
+
+			.other-logos {
+				width: 90%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				margin: 4em 0 0 0;
+				justify-content: space-evenly;
+				align-items: center;
+
+				img {
+					width: 5em;
+				}
 			}
 		}
 
@@ -420,6 +427,7 @@ html {
 				display: flex;
 				align-items: flex-start;
 				margin: 0 3.5em 0 2em;
+
 				img {
 					width: 8.5em;
 				}
@@ -684,5 +692,712 @@ html {
 		bottom: 1em;
 		right: 1em;
 		font-size: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.wrapper {
+		section.one {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: aqua;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			.hero {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+
+				.welcome {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					h1 {
+						font-size: 2rem;
+					}
+
+					h2 {
+						font-size: 1rem;
+					}
+				}
+
+				.mario {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					animation: jump 1.2s infinite ease-out;
+
+					img {
+						width: 4em;
+					}
+
+					@keyframes jump {
+						0%,
+						100% {
+							transform: translate(0%, 0%);
+						}
+						50% {
+							transform: translate(0%, -50%);
+						}
+					}
+				}
+			}
+
+			.arrows {
+				display: flex;
+				position: relative;
+				bottom: 8em;
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 3em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.two {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			//background-color: chartreuse;
+
+			.description {
+				p {
+					margin: 0 1em;
+					font-size: 0.8em;
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -7.9em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.three {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: crimson;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.html-section {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+
+				.logo-html {
+					display: flex;
+					align-items: center;
+					margin: 0 0 3em 0;
+					img {
+						width: 12em;
+					}
+				}
+
+				.html-desc {
+					p {
+						margin: 0 1em;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -2em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.four {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: tomato;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.css-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+
+				.logo-css {
+					display: flex;
+					align-items: center;
+					margin: 0 0 3em 0;
+					img {
+						width: 8.5em;
+					}
+				}
+
+				.css-desc {
+					p {
+						margin: 0 1em;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -2em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.five {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: cornflowerblue;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.js-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+
+				.logo-js {
+					display: flex;
+					align-items: center;
+					margin: 0 0 3em 0;
+					img {
+						width: 8.5em;
+					}
+				}
+
+				.js-desc {
+					p {
+						margin: 0 1em;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -2em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.six {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: darkblue;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.other {
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: center;
+				align-items: center;
+				margin: 0 1em;
+
+				.other-section {
+					p {
+						margin: 0 0 0 1em;
+						font-size: 0.8em;
+					}
+				}
+
+				.other-logos {
+					width: 90%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					margin: 0 0 0 0;
+					justify-content: space-evenly;
+					align-items: center;
+
+					img {
+						width: 4em;
+					}
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -2em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.15em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.seven {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: darkgreen;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.figma-section {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				margin: 1em 0;
+
+				.logo-figma {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 0 0 1em 0;
+					img {
+						width: 4em;
+					}
+				}
+
+				.figma-desc {
+					p {
+						margin: 0 1em;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.canva-section {
+				display: flex;
+				flex-direction: column;
+
+				width: 100%;
+				margin: 1em 0;
+
+				.logo-canva {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 0 0 1em 0;
+					img {
+						width: 4em;
+					}
+				}
+
+				.canva-desc {
+					p {
+						margin: 0 1em;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: 0em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.eight {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: darkkhaki;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.description {
+				p {
+					margin: 0 1em;
+					font-size: 0.8em;
+				}
+			}
+
+			.card-container {
+				display: flex;
+				flex-direction: column;
+				margin: 0 1em;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+
+				.card {
+					width: 100%;
+					background-color: black;
+					color: white;
+					border-radius: 8px;
+					transition: 0.5s;
+					opacity: 0.8;
+					filter: grayscale(1);
+
+					a {
+						text-decoration: none;
+						color: white;
+
+						img {
+							width: 100%;
+						}
+
+						.card-desc {
+							display: none;
+							margin: 0.5em;
+							p {
+								font-size: 0.7rem;
+							}
+						}
+					}
+
+					&:hover {
+						opacity: 1;
+						filter: grayscale(0);
+					}
+				}
+			}
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -0.2em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.nine {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: darkorange;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.contact {
+				p {
+					margin: 2em 1em;
+					font-size: 0.8em;
+				}
+			}
+
+			.contact-logos {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-content: center;
+				margin: 0 0 0 0;
+				justify-content: space-evenly;
+				align-items: center;
+
+				a {
+					opacity: 1;
+
+					img {
+						width: 4em;
+						margin: 2em;
+					}
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -6.5em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+
+				.arrow-down {
+					transform: rotate(90deg);
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		section.ten {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			//background-color: darkslateblue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.the-end {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				p {
+					font-size: 2em;
+				}
+			}
+
+			.arrows {
+				display: none;
+				position: relative;
+				bottom: -14em;
+
+				.arrow-up {
+					transform: rotate(-90deg) translateY(0.35em);
+					margin-bottom: 1em;
+
+					span {
+						font-size: 2.2em;
+
+						a {
+							text-decoration: none;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+
+		footer {
+			position: fixed;
+			width: 100%;
+			text-align: center;
+			font-size: 0.5rem;
+		}
 	}
 }
